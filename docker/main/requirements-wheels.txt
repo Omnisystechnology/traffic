@@ -61,7 +61,7 @@ rapidfuzz==3.12.*
 appdirs==1.4.*
 argcomplete==2.0.*
 contextlib2==0.6.*
-distlib==0.3.*
+distlib==0.4.*
 filelock==3.8.*
 future==0.18.*
 importlib-metadata==5.1.*
