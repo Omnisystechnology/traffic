@@ -346,6 +346,9 @@ COPY web/package.json web/package-lock.json ./
 RUN npm install
 
 COPY web/ ./
+# Raise Node's heap ceiling for this stage - the default limit was being hit during
+# the production Vite/Rollup build, crashing with "JavaScript heap out of memory".
+ENV NODE_OPTIONS=--max-old-space-size=4096
 RUN npm run build \
     && mv dist/BASE_PATH/monacoeditorwork/* dist/assets/ \
     && rm -rf dist/BASE_PATH
