@@ -55,6 +55,19 @@ differently can behave completely differently, and Frigate won't always warn you
 silently ignored for days before we noticed.) If you're not comfortable with YAML,
 prefer the dashboard (above) over hand-editing this file.
 
+## What you need installed
+
+Depends what you're doing:
+
+- **Just viewing the dashboard / reviewing alerts** — nothing. Any browser. (Only works
+  from the host machine right now — see the note above about remote access.)
+- **Running/hosting this instance** — Docker Desktop, already set up on this machine.
+- **Editing and testing code changes** — Docker Desktop on *your own* machine too.
+  This isn't optional: Frigate bundles specific builds of ffmpeg, a media server
+  (go2rtc), and ML runtime libraries that only install correctly inside its container
+  image. There's no supported way to run it directly with just `python` or `npm` —
+  Frigate's own docs say plainly it's meant to run "with Docker installed."
+
 ## For actual code changes (developers)
 
 See `CONTRIBUTING.md` for the full setup. Short version: this project has a
