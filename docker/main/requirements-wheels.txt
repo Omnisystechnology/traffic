@@ -30,7 +30,7 @@ pyzmq == 26.2.*
 ruamel.yaml == 0.18.*
 tzlocal == 5.2
 requests == 2.32.*
-types-requests == 2.32.*
+types-requests == 2.33.*
 norfair == 2.3.*
 setproctitle == 1.3.*
 ws4py == 0.5.*
